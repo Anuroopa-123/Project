@@ -1,16 +1,11 @@
-/* Topbar Styling */
+/* --- Topbar Styling --- */
 #topbar {
   background-color: #f1f6fe;
   padding: 9px 0;
-  position: fixed;  /* Ensure it stays fixed at the top */
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 9999;  /* Ensure it's above the navbar */
   width: 100%;
+  position: static;
 }
 
-/* Left Side Social Media Links */
 .leftsidebuttons {
   display: flex;
   align-items: center;
@@ -20,35 +15,41 @@
   list-style: none;
   display: flex;
   gap: 15px;
+  padding: 0;
+  margin: 0;
 }
 
 .social-icon-img {
-  width: 25px;
-  height: 25px;
+  font-size: 20px;
+  color: #064ea2;
 }
 
-/* Right Side: Department Login, Skip to Main Content, Language Selection */
 .rightsidebuttons {
   display: flex;
   align-items: center;
-  justify-content: flex-end;  /* Align items to the right */
-  gap: 15px;  /* Space between items */
-  flex-grow: 1;  /* Take up remaining space to push items to the right */
+  justify-content: flex-end;
+  gap: 15px;
+  flex-grow: 1;
 }
 
 .rightsidebuttons a,
 .rightsidebuttons .btn,
-.rightsidebuttons .language-btn {
-  margin-left: 20px; /* Adds space between each item */
+.language-btn {
+  margin-left: 20px;
+  font-size: 14px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
 }
 
-.rightsidebuttons .language-btn {
+.language-btn {
   padding: 4px 12px;
   background-color: #064ea2;
   color: white;
   border-radius: 5px;
   cursor: pointer;
   position: relative;
+  border: none;
 }
 
 .language-btn .dropdown-menu {
@@ -71,43 +72,153 @@
   color: white;
   text-decoration: none;
   padding: 5px 10px;
+  display: block;
 }
 
 .language-btn .dropdown-menu a:hover {
-  background-color: #005AA7;
+  background-color: #005aa7;
 }
 
 .rightsidebuttons .btn {
   background-color: #064ea2;
   color: white;
-  text-decoration: none;
   padding: 6px 15px;
   border-radius: 5px;
+}
+
+/* --- Header Styling --- */
+#header {
+  background-color: #fff;
+  padding: 10px 0;
+  width: 100%;
+  position: static;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.left-logos,
+.right-logos {
   display: flex;
   align-items: center;
 }
 
-/* Ensure the skip button and other elements don’t get hidden */
-.rightsidebuttons a {
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-  color: #064ea2;
+.left-logos img,
+.right-logos img {
+  max-height: 90px;
+  object-fit: contain;
+  margin-right: 10px;
 }
 
-/* Mobile Adjustments */
+.logo.text-center {
+  flex: 1;
+  text-align: center;
+}
+
+.txt-red {
+  color: red;
+  font-weight: bold;
+  font-size: 26px;
+}
+
+/* --- Navbar Styling --- */
+#navbar {
+  background-color: #fff;
+  padding: 0;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: static;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+  width: 100%;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 15px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover,
+.navbar ul li.active a {
+  color: #d19462;
+}
+
+.navbar ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #41576e;
+  bottom: 0;
+  left: 50%;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.navbar ul li a:hover::after,
+.navbar ul li.active a::after {
+  width: 100%;
+  left: 0;
+}
+.mobile-nav-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+/* --- Responsive --- */
 @media (max-width: 768px) {
-  /* Adjust font size for smaller screens */
-  .rightsidebuttons a {
-    font-size: 12px;
-  }
-
+  .rightsidebuttons a,
   .rightsidebuttons .btn {
     font-size: 12px;
   }
 
-  /* Hide social media icons on mobile */
   .socialicons {
     display: none;
+  }
+
+  .logo.text-center {
+    font-size: 20px;
+  }
+
+  .left-logos img,
+  .right-logos img {
+    height: 40px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    display: none;
+  }
+
+  #navbar.active ul {
+    display: flex;
+  }
+
+  #navbar ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background-color: #fff;
+    padding: 10px 0;
+  }
+  .navbar ul li a {
+    font-size: 18px;
+    padding: 15px 20px;
+  }
+
+  .mobile-nav-toggle {
+    display: block;
   }
 }
