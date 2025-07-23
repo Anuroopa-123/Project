@@ -1,0 +1,79 @@
+/* Navbar Component CSS */
+#navbar {
+  background-color: #f8f9fa;
+  padding: 10px 0;
+  width: 100%;
+  z-index: 1000;
+  position: fixed;
+  top: 51px;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar links */
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 15px;
+  position: relative; /* To position the underline */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Hover Effect: Change text color and add animated underline */
+.navbar ul li a:hover,
+.navbar ul li.active a {
+  color: #d19462; /* Change text color to blue */
+}
+
+/* Animated Underline */
+.navbar ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #41576e; /* Blue underline */
+  bottom: 0;
+  left: 50%;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.navbar ul li a:hover::after,
+.navbar ul li.active a::after {
+  width: 100%;
+  left: 0;
+}
+
+
+/* Mobile View */
+@media screen and (max-width: 768px) {
+  #navbar ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  #navbar.active ul {
+    display: flex;
+  }
+}

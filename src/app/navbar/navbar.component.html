@@ -1,0 +1,32 @@
+<!-- Navbar -->
+<nav id="navbar" class="navbar">
+  <ul>
+    <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      <a class="nav-link" routerLink="/">
+        <i class="bi bi-house-door pe-1"></i> Home
+      </a>
+    </li>
+    <li routerLinkActive="active">
+      <a class="nav-link" [routerLink]="['/committee']">
+        <i class="bi bi-house-door pe-1"></i> About Committee
+      </a>
+    </li>
+    <li routerLinkActive="active">
+      <a class="nav-link" [routerLink]="['/assembly']"> Assembly </a>
+    </li>
+    <li routerLinkActive="active">
+      <a class="nav-link" [routerLink]="['/gallery']"> Committee Photos </a>
+    </li>
+    <li routerLinkActive="active">
+      <a class="nav-link" [routerLink]="['/report']"> Committee Reports </a>
+    </li>
+    <li routerLinkActive="active">
+      <a class="nav-link" [routerLink]="['/press-release']"> Press Release </a>
+    </li>
+    <li routerLinkActive="active">
+      <a class="nav-link" [routerLink]="['/login']">
+        <i class="pe-1 bi bi-pencil-square"></i> Response Registration
+      </a>
+    </li>
+  </ul>
+</nav>

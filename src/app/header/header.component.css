@@ -1,0 +1,76 @@
+/* Header Component CSS */
+#header {
+  background-color: #fff;
+  margin-top: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+#header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  gap: 10px;
+}
+
+.logo.text-center {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.left-logos img,
+.right-logos img {
+  height: 79px;
+  max-width: 100%;
+  object-fit: contain;
+  margin-right: 10px;
+}
+
+.txt-red {
+  color: red;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.txt-green {
+  color: green;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 4px;
+}
+
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  #header .container {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .left-logos,
+  .right-logos {
+    margin: 10px 0;
+  }
+
+  .left-logos img,
+  .right-logos img {
+    height: 40px;
+    margin-right: 8px;
+  }
+
+  .logo.text-center {
+    flex: none;
+    margin: 10px 0;
+  }
+}
