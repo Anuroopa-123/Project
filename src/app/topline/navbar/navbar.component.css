@@ -1,0 +1,165 @@
+#navbar {
+  background-color: #f8f9fa;
+  padding: 0px 0;
+  width: 100%;
+  margin-top: 10px;
+  z-index: 10000;
+  position: fixed;
+  top: 120px;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar links */
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 15px;
+  position: relative; /* To position the underline */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Hover Effect: Change text color and add animated underline */
+.navbar ul li a:hover,
+.navbar ul li.active a {
+  color: #d19462; /* Change text color to blue */
+}
+
+/* Animated Underline */
+.navbar ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #41576e; /* Blue underline */
+  bottom: 0;
+  left: 50%;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.navbar ul li a:hover::after,
+.navbar ul li.active a::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Header section*/
+#header {
+  background-color: #fff;
+  margin-top: 57px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+/* Container for header elements */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+/* Logo section on the left */
+.left-logos,
+.right-logos {
+  display: flex;
+  align-items: center;
+}
+
+.left-logos img,
+.right-logos img {
+  max-height: 90px;
+  object-fit: contain;
+  margin-right: 10px;
+}
+
+/* Centered text */
+.logo.text-center {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Style for the red text */
+.txt-red {
+  color: red;
+  font-weight: bold;
+  font-size: 26px;
+}
+
+/* Media queries for mobile responsiveness */
+@media (max-width: 768px) {
+  #header .container {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .left-logos,
+  .right-logos {
+    margin: 10px 0;
+  }
+
+  .left-logos img,
+  .right-logos img {
+    height: 40px;
+    margin-right: 8px;
+  }
+
+  .logo.text-center {
+    flex: none;
+    margin: 10px 0;
+  }
+
+
+/* Mobile View */
+@media screen and (max-width: 768px) {
+  /* Hide the navigation links by default */
+  #navbar ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Show the hamburger toggle icon */
+  .mobile-nav-toggle {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  /* Display the navbar links when 'active' class is added */
+  #navbar.active ul {
+    display: flex;
+  }
+
+  /* Optional: Styling for individual links on mobile */
+  .navbar ul li a {
+    font-size: 18px;
+    padding: 15px 20px;
+  }
+}
+}

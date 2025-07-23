@@ -7,7 +7,7 @@ import {
   AfterViewChecked,
 } from '@angular/core';
 import { UnionStateRelationsComponent } from '../union-state-relations/union-state-relations.component';
-import { ContentService } from '../services/content.service';
+
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 

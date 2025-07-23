@@ -3,20 +3,26 @@
     padding: 15px 0;
     background-color: #f1f6fe;
     width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 60px; /* Adjust top margin for spacing, especially if header/navbar is fixed */
 }
 
+/* Breadcrumb heading */
 .breadcrumbs h2 {
     font-size: 20px;
     font-weight: 600;
     color: #012970;
+    margin-bottom: 10px;
 }
 
+/* Styling for breadcrumb list */
 .breadcrumb {
     background-color: transparent;
     padding: 0;
     margin-bottom: 0;
 }
 
+/* Breadcrumb items styling */
 .breadcrumb-item a {
     text-decoration: none;
     color: #0d6efd;
@@ -25,6 +31,21 @@
 .breadcrumb-item.active {
     color: #6c757d;
 }
+
+/* On hover, change breadcrumb text color */
+.breadcrumb-item a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Ensure breadcrumbs are well-aligned and use flexbox */
+.breadcrumb .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 
 /* Main container to keep the form centered and the footer at the bottom */
 .page-container {

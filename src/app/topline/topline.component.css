@@ -1,0 +1,113 @@
+/* Topbar Styling */
+#topbar {
+  background-color: #f1f6fe;
+  padding: 9px 0;
+  position: fixed;  /* Ensure it stays fixed at the top */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;  /* Ensure it's above the navbar */
+  width: 100%;
+}
+
+/* Left Side Social Media Links */
+.leftsidebuttons {
+  display: flex;
+  align-items: center;
+}
+
+.socialicons {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon-img {
+  width: 25px;
+  height: 25px;
+}
+
+/* Right Side: Department Login, Skip to Main Content, Language Selection */
+.rightsidebuttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;  /* Align items to the right */
+  gap: 15px;  /* Space between items */
+  flex-grow: 1;  /* Take up remaining space to push items to the right */
+}
+
+.rightsidebuttons a,
+.rightsidebuttons .btn,
+.rightsidebuttons .language-btn {
+  margin-left: 20px; /* Adds space between each item */
+}
+
+.rightsidebuttons .language-btn {
+  padding: 4px 12px;
+  background-color: #064ea2;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+}
+
+.language-btn .dropdown-menu {
+  display: none;
+}
+
+.language-btn:hover .dropdown-menu {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #064ea2;
+  color: white;
+  padding: 10px;
+  width: 100px;
+  border-radius: 5px;
+}
+
+.language-btn .dropdown-menu a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+.language-btn .dropdown-menu a:hover {
+  background-color: #005AA7;
+}
+
+.rightsidebuttons .btn {
+  background-color: #064ea2;
+  color: white;
+  text-decoration: none;
+  padding: 6px 15px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+/* Ensure the skip button and other elements don’t get hidden */
+.rightsidebuttons a {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  color: #064ea2;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  /* Adjust font size for smaller screens */
+  .rightsidebuttons a {
+    font-size: 12px;
+  }
+
+  .rightsidebuttons .btn {
+    font-size: 12px;
+  }
+
+  /* Hide social media icons on mobile */
+  .socialicons {
+    display: none;
+  }
+}
