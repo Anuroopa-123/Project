@@ -1,11 +1,11 @@
 import { Component, AfterViewInit } from '@angular/core';
-import { NavbarComponent } from "./navbar/navbar.component";
-
+import { NavbarComponent } from './navbar/navbar.component';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-topline',
   standalone: true,
-  imports: [NavbarComponent],
+  imports: [RouterLink, RouterLinkActive],
   templateUrl: './topline.component.html',
   styleUrl: './topline.component.css',
 })
@@ -14,6 +14,15 @@ export class ToplineComponent {
 
   ngAfterViewInit(): void {
     this.updateDateTime();
+  }
+  isNavbarOpen = false;
+
+  toggleNavbar() {
+    this.isNavbarOpen = !this.isNavbarOpen;
+  }
+
+  closeNavbar() {
+    this.isNavbarOpen = false;
   }
 
   // Function to update date and time

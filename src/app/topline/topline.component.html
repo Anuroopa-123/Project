@@ -1,3 +1,4 @@
+<!-- TOPBAR -->
 <section id="topbar" class="d-flex align-items-center">
   <div
     class="container d-flex justify-content-center justify-content-md-between"
@@ -6,53 +7,108 @@
     <div class="leftsidebuttons d-flex align-items-center">
       <ul class="socialicons">
         <li>
-          <a href="" target="_blank" rel="noopener noreferrer" title="YouTube">
-            <i class="bi bi-youtube social-icon-img"></i>
-          </a>
+          <a href="#"
+            ><i class="bi bi-youtube social-icon-img" title="YouTube"></i
+          ></a>
         </li>
         <li>
-          <a href="" target="_blank" rel="noopener noreferrer" title="Facebook">
-            <i class="bi bi-facebook social-icon-img"></i>
-          </a>
+          <a href="#"
+            ><i class="bi bi-facebook social-icon-img" title="Facebook"></i
+          ></a>
         </li>
         <li>
-          <a
-            href=""
-            target="_blank"
-            rel="noopener noreferrer"
-            title="Instagram"
-          >
-            <i class="bi bi-instagram social-icon-img"></i>
-          </a>
+          <a href="#"
+            ><i class="bi bi-instagram social-icon-img" title="Instagram"></i
+          ></a>
         </li>
         <li>
-          <a href="" target="_blank" rel="noopener noreferrer" title="Twitter">
-            <i class="bi bi-twitter social-icon-img"></i>
-          </a>
+          <a href="#"
+            ><i class="bi bi-twitter social-icon-img" title="Twitter"></i
+          ></a>
         </li>
       </ul>
     </div>
 
-    <!-- Right Side: Department Login, Skip to Main Content, Language Selection -->
+    <!-- Right Side -->
     <div class="rightsidebuttons d-flex align-items-center">
-      <a href="#navbar" class="twitter">
-        <i class="bi bi-skip-forward-fill"></i> Skip to Main Content
-      </a>
-      <a href="#" class="twitter"><i class="bi bi-cloud-sun"></i></a>
+      <a href="#navbar"
+        ><i class="bi bi-skip-forward-fill"></i> Skip to Main Content</a
+      >
+      <a href="#"><i class="bi bi-cloud-sun"></i></a>
+
       <button class="language-btn">
-        English
-        <i class="bi bi-chevron-down"></i>
+        English <i class="bi bi-chevron-down"></i>
         <div class="dropdown-menu">
-          <a href="/underdevelopment">தமிழ்</a>
+          <a routerLink="/underdevelopment">தமிழ்</a>
         </div>
       </button>
-      <a href="" target="_blank" class="btn">
+
+      <a href="#" class="btn">
         Department Login
-        <div class="arrow-wrapper">
-          <div class="arrow"></div>
-        </div>
+        <div class="arrow-wrapper"><div class="arrow"></div></div>
       </a>
     </div>
   </div>
 </section>
-<app-navbar></app-navbar>
+
+<!-- HEADER -->
+<header id="header">
+  <div class="container d-flex align-items-center justify-content-between">
+    <div class="left-logos d-flex align-items-center">
+      <img src="assets/img/cm.png" alt="CM Image" class="img-fluid" />
+      <img src="assets/img/tn_logo.png" alt="TN Logo" class="img-fluid mx-2" />
+    </div>
+    <div class="logo text-center">
+      <span class="d-block txt-red"
+        >High Level Committee on Union State Relations</span
+      >
+    </div>
+    <div class="right-logos d-flex align-items-center">
+      <img src="assets/img/cm_pm.jpg" alt="Leader" class="img-fluid mx-2" />
+    </div>
+  </div>
+</header>
+
+<!-- Hamburger Icon (for mobile) -->
+<div class="mobile-nav-toggle" (click)="toggleNavbar()">
+  <i class="bi bi-list"></i>
+</div>
+
+<!-- Navbar -->
+<nav id="navbar" class="navbar" [class.active]="isNavbarOpen">
+  <ul>
+    <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      <a class="nav-link" routerLink="/" (click)="closeNavbar()">Home</a>
+    </li>
+    <li routerLinkActive="active">
+      <a class="nav-link" routerLink="/committee" (click)="closeNavbar()"
+        >About Committee</a
+      >
+    </li>
+    <li routerLinkActive="active">
+      <a class="nav-link" routerLink="/assembly" (click)="closeNavbar()"
+        >Assembly</a
+      >
+    </li>
+    <li routerLinkActive="active">
+      <a class="nav-link" routerLink="/gallery" (click)="closeNavbar()"
+        >Committee Photos</a
+      >
+    </li>
+    <li routerLinkActive="active">
+      <a class="nav-link" routerLink="/report" (click)="closeNavbar()"
+        >Committee Reports</a
+      >
+    </li>
+    <li routerLinkActive="active">
+      <a class="nav-link" routerLink="/press-release" (click)="closeNavbar()"
+        >Press Release</a
+      >
+    </li>
+    <li routerLinkActive="active">
+      <a class="nav-link" routerLink="/login" (click)="closeNavbar()">
+        <i class="bi bi-pencil-square pe-1"></i> Response Registration
+      </a>
+    </li>
+  </ul>
+</nav>

@@ -1,4 +1,4 @@
-#navbar {
+/* #navbar {
   background-color: #f8f9fa;
   padding: 0px 0;
   width: 100%;
@@ -8,6 +8,28 @@
   top: 120px;
   left: 0;
   right: 0;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+} */
+#header {
+  background-color: #fff;
+  margin-top: 0; /* adjust this if needed */
+  /* position: fixed; */ /* REMOVE THIS */
+  /* top: 0;
+  left: 0;
+  right: 0; */
+  z-index: 999;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+#navbar {
+  background-color: #f8f9fa;
+  padding: 0px 0;
+  width: 100%;
+  margin-top: 10px;
+  /* position: fixed; */ /* REMOVE THIS */
+  /* top: 120px;
+  left: 0;
+  right: 0; */
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -58,7 +80,7 @@
 }
 
 /* Header section*/
-#header {
+/* #header {
   background-color: #fff;
   margin-top: 57px;
   position: fixed;
@@ -67,8 +89,7 @@
   right: 0;
   z-index: 999;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
-}
+} */
 
 /* Container for header elements */
 .container {
@@ -132,34 +153,33 @@
     margin: 10px 0;
   }
 
+  /* Mobile View */
+  @media screen and (max-width: 768px) {
+    /* Hide the navigation links by default */
+    #navbar ul {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+    }
 
-/* Mobile View */
-@media screen and (max-width: 768px) {
-  /* Hide the navigation links by default */
-  #navbar ul {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-  }
+    /* Show the hamburger toggle icon */
+    .mobile-nav-toggle {
+      display: block;
+      font-size: 30px;
+      cursor: pointer;
+      padding: 10px;
+    }
 
-  /* Show the hamburger toggle icon */
-  .mobile-nav-toggle {
-    display: block;
-    font-size: 30px;
-    cursor: pointer;
-    padding: 10px;
-  }
+    /* Display the navbar links when 'active' class is added */
+    #navbar.active ul {
+      display: flex;
+    }
 
-  /* Display the navbar links when 'active' class is added */
-  #navbar.active ul {
-    display: flex;
+    /* Optional: Styling for individual links on mobile */
+    .navbar ul li a {
+      font-size: 18px;
+      padding: 15px 20px;
+    }
   }
-
-  /* Optional: Styling for individual links on mobile */
-  .navbar ul li a {
-    font-size: 18px;
-    padding: 15px 20px;
-  }
-}
 }
