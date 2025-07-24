@@ -1,0 +1,17 @@
+<div class="feedback-form">
+  <h3>Submit Feedback</h3>
+  
+  <!-- Feedback Form -->
+  <form (ngSubmit)="onSubmit()">
+    <label for="name">Your Name:</label>
+    <input id="name" [(ngModel)]="feedbackData.name" name="name" required />
+
+    <label for="feedback">Your Feedback:</label>
+    <textarea id="feedback" [(ngModel)]="feedbackData.feedback" name="feedback" required></textarea>
+
+    <label for="file">Choose File:</label>
+    <input type="file" id="file" [(ngModel)]="feedbackData.file" name="file" />
+
+    <button type="submit">Submit Feedback</button>
+  </form>
+</div>
