@@ -8,7 +8,7 @@ import { PressreleaseComponent } from './pressrelease/pressrelease.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { CommitteePhotosComponent } from './committee-photos/committee-photos.component';
 import { CommitteeReportsComponent } from './committee-reports/committee-reports.component';
-
+import { FeedbackComponent } from './feedback/feedback.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -20,5 +20,5 @@ export const routes: Routes = [
   { path: 'login', component: RegistrationComponent },
   { path: 'gallery', component: CommitteePhotosComponent },
   { path: 'report', component: CommitteeReportsComponent },
-
+  { path: 'feedback', component: FeedbackComponent },
 ];
