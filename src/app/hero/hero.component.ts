@@ -41,10 +41,24 @@ export class HeroComponent {
 
   constructor() { }
 
-  ngOnInit(): void {
-    // Initialization logic can go here
+ ngOnInit(): void {
+    // Initialize Swiper when the component is loaded
+    const swiper = new Swiper('.swiper-container', {
+      loop: true, // Infinite loop
+      autoplay: {
+        delay: 3000, // Auto-slide every 3 seconds
+        disableOnInteraction: false, // Continue autoplay on interaction
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true, // Enable clicking for bullets
+      },
+    });
   }
-
   handleLinkClick(item: any) {
     console.log('Item clicked:', item);
     if (item.url) {
