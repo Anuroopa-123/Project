@@ -1,10 +1,28 @@
 <section id="hero" class="hero-section">
-  <div class="hero-image">
-    <img src="assets/img/background.jpg" alt="Hero Image" class="hero-img" />
+  <!-- Swiper Container for Slider -->
+  <div class="swiper-container hero-image">
+    <div class="swiper-wrapper">
+      <!-- Slide 1: Hero Image 1 -->
+      <div class="swiper-slide">
+        <img
+          src="assets/img/background.jpg"
+          alt="Hero Image 1"
+          class="hero-img"
+        />
+      </div>
+      <!-- Slide 2: Hero Image 2 -->
+      <div class="swiper-slide">
+        <img src="assets/img/Image22.jpg" alt="Hero Image 2" class="hero-img" />
+      </div>
+    </div>
+    <!-- If you want navigation buttons, add this -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
   </div>
 
+  <!-- Optional Hero Content -->
   <div class="hero-content">
-    <!-- You can place any content you want here, for example: -->
+    <!-- Example of possible content you want to add -->
     <!-- <h1>Welcome to the Union State Web Portal</h1>
     <p>Empowering federal cooperation and public involvement</p>
     <a href="#members" class="cta-button">Meet the Members</a> -->
@@ -21,11 +39,19 @@
   </div>
 
   <!-- Member Cards -->
-  <div class="container aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+  <div
+    class="container aos-init aos-animate"
+    data-aos="fade-up"
+    data-aos-delay="100"
+  >
     <div class="row justify-content-center g-4">
       <!-- Member 1 -->
       <div class="col-lg-4 col-md-6 d-flex justify-content-center">
-        <div class="service-card aos-init aos-animate" data-aos="zoom-in" data-aos-delay="100">
+        <div
+          class="service-card aos-init aos-animate"
+          data-aos="zoom-in"
+          data-aos-delay="100"
+        >
           <div class="card-header">
             <div class="icon-box">
               <i class="bi bi-shield-check"></i>
@@ -34,10 +60,16 @@
           <h4>Justice (Retd.) Kurian Joseph</h4>
           <div class="card-body">
             <p>
-              Justice Kurian Joseph is a retired Supreme Court Judge with over 35 years of experience in constitutional law, federal policy, and administrative justice.
+              <!-- Justice Kurian Joseph is a retired Supreme Court Judge with over
+              35 years of experience in constitutional law, federal policy, and
+              administrative justice. -->
             </p>
             <div class="feature-image">
-              <img src="assets/img/members1/.jpg" alt="Justice (Retd.) Kurian Joseph" class="img-fluid" />
+              <img
+                src="assets/img/members1/.jpg"
+                alt="Justice (Retd.) Kurian Joseph"
+                class="img-fluid"
+              />
             </div>
           </div>
           <div class="card-footer">
@@ -48,35 +80,14 @@
           </div>
         </div>
       </div>
-          <!-- Member 2-->
-      <div class="col-lg-4 col-md-6 d-flex justify-content-center">
-        <div class="service-card aos-init aos-animate" data-aos="zoom-in" data-aos-delay="500">
-          <div class="card-header">
-            <div class="icon-box">
-              <i class="bi bi-shield-check"></i>
-            </div>
-          </div>
-          <h4>Shri.M.Naganathan</h4>
-          <div class="card-body">
-            <p>
-              Shri.M.Naganathan is a noted constitutional scholar and public policy expert with academic contributions in the field of federal structures and legislative processes.
-            </p>
-            <div class="feature-image">
-              <img src="assets/img/members3/.jpg" alt="Shri.M.Naganathan" class="img-fluid" />
-            </div>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn-explore">
-              Vice Chairman
-              <i class="bi bi-arrow-up-right"></i>
-            </a>
-          </div>
-        </div>
-      </div>
 
-      <!-- Member 3-->
+      <!-- Member 2-->
       <div class="col-lg-4 col-md-6 d-flex justify-content-center">
-        <div class="service-card aos-init aos-animate" data-aos="zoom-in" data-aos-delay="300">
+        <div
+          class="service-card aos-init aos-animate"
+          data-aos="zoom-in"
+          data-aos-delay="300"
+        >
           <div class="card-header">
             <div class="icon-box">
               <i class="bi bi-shield-check"></i>
@@ -85,10 +96,16 @@
           <h4>Shri. K. Ashok Varadhan Shetty (IAS, Retd.)</h4>
           <div class="card-body">
             <p>
-              Shri. K. Ashok Varadhan Shetty is a former IAS officer and policy advisor with a specialization in fiscal federalism and governance reforms.
+              <!-- Shri. K. Ashok Varadhan Shetty is a former IAS officer and policy
+              advisor with a specialization in fiscal federalism and governance
+              reforms. -->
             </p>
             <div class="feature-image">
-              <img src="assets/img/members2/.jpg" alt="Shri. K. Ashok Varadhan Shetty (IAS, Retd.)" class="img-fluid" />
+              <img
+                src="assets/img/members2/.jpg"
+                alt="Shri. K. Ashok Varadhan Shetty (IAS, Retd.)"
+                class="img-fluid"
+              />
             </div>
           </div>
           <div class="card-footer">
@@ -99,8 +116,41 @@
           </div>
         </div>
       </div>
-
-  
+      <!-- Member 3-->
+      <div class="col-lg-4 col-md-6 d-flex justify-content-center">
+        <div
+          class="service-card aos-init aos-animate"
+          data-aos="zoom-in"
+          data-aos-delay="500"
+        >
+          <div class="card-header">
+            <div class="icon-box">
+              <i class="bi bi-shield-check"></i>
+            </div>
+          </div>
+          <h4>Shri.M.Naganathan</h4>
+          <div class="card-body">
+            <p>
+              <!-- Shri.M.Naganathan is a noted constitutional scholar and public
+              policy expert with academic contributions in the field of federal
+              structures and legislative processes. -->
+            </p>
+            <div class="feature-image">
+              <img
+                src="assets/img/members3/.jpg"
+                alt="Shri.M.Naganathan"
+                class="img-fluid"
+              />
+            </div>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn-explore">
+              Vice Chairman
+              <i class="bi bi-arrow-up-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -108,17 +158,19 @@
 <!-- Announcements Section -->
 
 <section id="announcements" class="important_links">
-    <!-- <h2>Announcements</h2> -->
+  <!-- <h2>Announcements</h2> -->
   <div class="announcements-1 card">
     <h3>Announcements 1</h3>
     <div class="content">
-        <div class="item">
-          <span class="dot"></span>
-          <div>
-            <h4>Thiru. C.N. Annadurai</h4>
-            <p>Former Chief Minister of Tamil Nadu (1967–1969)</p>
-            <p>"We seek more powers for the states, not to weaken the Centre, but to strengthen true democracy."</p>
-         
+      <div class="item">
+        <span class="dot"></span>
+        <div>
+          <h4>Thiru. C.N. Annadurai</h4>
+          <p>Former Chief Minister of Tamil Nadu (1967–1969)</p>
+          <p>
+            "We seek more powers for the states, not to weaken the Centre, but
+            to strengthen true democracy."
+          </p>
         </div>
       </div>
     </div>
@@ -128,13 +180,18 @@
   <div class="announcements-2 card">
     <h3>Announcements 2</h3>
     <div class="content">
-        <div class="item">
-          <span class="dot"></span>
-          <div>
-            <h4>Thiru. M. Karunanidhi</h4>
-            <p>Former Chief Minister of Tamil Nadu (Served 5 terms between 1969 and 2011)</p>
-            <p>"Language is not a chain, but a choice that must be respected, for unity, not uniformity."</p>
-       
+      <div class="item">
+        <span class="dot"></span>
+        <div>
+          <h4>Thiru. M. Karunanidhi</h4>
+          <p>
+            Former Chief Minister of Tamil Nadu (Served 5 terms between 1969 and
+            2011)
+          </p>
+          <p>
+            "Language is not a chain, but a choice that must be respected, for
+            unity, not uniformity."
+          </p>
         </div>
       </div>
     </div>
@@ -147,26 +204,33 @@
       <div class="marquee-container">
         <div class="marquee-content">
           <div class="marquee-item">
-            <a href="#historic-announcements">1) Links to Historic Announcements</a>
+            <a href="#historic-announcements"
+              >1) Links to Historic Announcements</a
+            >
           </div>
           <div class="marquee-item">
-            <a href="https://www.indiacode.nic.in/" target="_blank">2) Constitution of India – India Code Website</a>
+            <a href="https://www.indiacode.nic.in/" target="_blank"
+              >2) Constitution of India – India Code Website</a
+            >
           </div>
           <div class="marquee-item">
-            <a href="https://cadindia.clpr.org.in/" target="_blank">3) Constituent Assembly Debates</a>
+            <a href="https://cadindia.clpr.org.in/" target="_blank"
+              >3) Constituent Assembly Debates</a
+            >
           </div>
           <div class="marquee-item">
             <a href="#federal-setup">4) Federal Setup in Other Countries</a>
           </div>
           <div class="marquee-item">
-            <a href="#finance-commission-reports">5) Union Govt. Finance Commission Reports</a>
+            <a href="#finance-commission-reports"
+              >5) Union Govt. Finance Commission Reports</a
+            >
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-
 
 <!-- Union-State Relations Section -->
 <app-union-state-relations></app-union-state-relations>

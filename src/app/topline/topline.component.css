@@ -5,6 +5,10 @@
   width: 100%;
   position: static;
 }
+.font-size-controls {
+  margin-left: 20px;
+}
+
 
 .leftsidebuttons {
   display: flex;
@@ -43,7 +47,7 @@
 }
 
 .language-btn {
-  padding: 4px 12px;
+  padding: 7px 12px;
   background-color: #064ea2;
   color: white;
   border-radius: 5px;
@@ -175,6 +179,29 @@
   cursor: pointer;
   padding: 10px 20px;
 }
+/* Font size controls */
+.font-size-controls {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.font-size-btn {
+  background-color: #064ea2;
+  color: white;
+  border: none;
+  padding: 6px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.font-size-btn:hover {
+  background-color: #005aa7;
+}
+
 
 /* --- Responsive --- */
 @media (max-width: 768px) {
@@ -220,5 +247,12 @@
 
   .mobile-nav-toggle {
     display: block;
+  }
+   .font-size-controls {
+    margin-left: 10px;
+  }
+
+  .font-size-btn {
+    font-size: 12px;
   }
 }

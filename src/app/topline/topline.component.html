@@ -1,8 +1,6 @@
 <!-- TOPBAR -->
 <section id="topbar" class="d-flex align-items-center">
-  <div
-    class="container d-flex justify-content-center justify-content-md-between"
-  >
+  <div class="container d-flex justify-content-center justify-content-md-between">
     <!-- Left Side: Social Media Links -->
     <div class="leftsidebuttons d-flex align-items-center">
       <ul class="socialicons">
@@ -23,10 +21,15 @@
         </li>
         <li>
           <a href="#"
-            ><i class="bi bi-twitter social-icon-img" title="Twitter"></i
+            ><i class="bi bi-twitter-x" title="Twitter"></i
           ></a>
         </li>
       </ul>
+      <div class="font-size-controls">
+        <button id="decrease-font" class="font-size-btn" (click)="decreaseFontSize()">-A</button>
+        <button id="default-font" class="font-size-btn" (click)="resetFontSize()">A</button>
+        <button id="increase-font" class="font-size-btn" (click)="increaseFontSize()">A+</button>
+      </div>
     </div>
 
     <!-- Right Side -->
@@ -36,20 +39,21 @@
       >
       <a href="#"><i class="bi bi-cloud-sun"></i></a>
 
+      <a href="#" class="btn">
+        Department Login
+        <div class="arrow-wrapper"><div class="arrow"></div></div>
+      </a>
+
       <button class="language-btn">
         English <i class="bi bi-chevron-down"></i>
         <div class="dropdown-menu">
           <a routerLink="/underdevelopment">தமிழ்</a>
         </div>
       </button>
-
-      <a href="#" class="btn">
-        Department Login
-        <div class="arrow-wrapper"><div class="arrow"></div></div>
-      </a>
     </div>
   </div>
 </section>
+
 
 <!-- HEADER -->
 <header id="header">
@@ -107,7 +111,7 @@
     </li>
     <li routerLinkActive="active">
       <a class="nav-link" routerLink="/login" (click)="closeNavbar()">
-        <i class="bi bi-pencil-square pe-1"></i> Response Registration
+        <i class="bi bi-pencil-square pe-1"></i> Questionnaire
       </a>
     </li>
   </ul>

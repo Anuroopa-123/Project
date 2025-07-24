@@ -6,6 +6,23 @@
   color: white;
   text-align: center;
 }
+/* Swiper Image Styling */
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-wrapper {
+  display: flex;
+}
+
+.swiper-slide {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .container img {
   width: 100%; /* Image width should scale with the container */

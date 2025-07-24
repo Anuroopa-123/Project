@@ -10,7 +10,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   styleUrl: './topline.component.css',
 })
 export class ToplineComponent {
-  constructor() {}
+    constructor() {}
 
   ngAfterViewInit(): void {
     this.updateDateTime();
@@ -46,4 +46,22 @@ export class ToplineComponent {
       }
     }, 1000); // Update every second
   }
+
+  // Adjust the font size of the page dynamically
+  decreaseFontSize() {
+    let currentSize = parseFloat(document.body.style.fontSize || '16px');
+    if (currentSize > 12) {
+      document.body.style.fontSize = (currentSize - 1) + 'px';
+    }
+  }
+
+  increaseFontSize() {
+    let currentSize = parseFloat(document.body.style.fontSize || '16px');
+    document.body.style.fontSize = (currentSize + 1) + 'px';
+  }
+
+  resetFontSize() {
+    document.body.style.fontSize = '16px';
+  }
+
 }
