@@ -110,3 +110,20 @@ h3 {
   font-weight: 600;
 }
 
+
+/*Quotes section */
+/* Basic styles for the swiper-container */
+
+/* Styling for mobile responsiveness */
+@media (max-width: 768px) {
+  .swiper-container {
+    height: auto;
+  }
+    .testimonial-wrap {
+    width: 100%;  /* Ensure the card takes full width on smaller screens */
+    max-width: 100%;
+  }
+}
+
+
+

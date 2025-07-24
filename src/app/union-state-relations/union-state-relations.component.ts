@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Swiper } from 'swiper'; 
+import 'swiper/swiper-bundle.css'; 
 
 @Component({
   selector: 'app-union-state-relations',
@@ -31,13 +33,28 @@ export class UnionStateRelationsComponent implements OnInit, OnDestroy {
   currentIndex = 0;
   intervalId: any;
 
-  ngOnInit() {
-    this.intervalId = setInterval(() => {
-      this.currentIndex = (this.currentIndex + 1) % this.quotes.length;
-    }, 3000); // change quote every 3 seconds
+  
+   ngOnInit() {
+    // Initialize Swiper with smooth transition effect and pagination
+    new Swiper('.swiper-container', {
+      loop: true,
+      autoplay: {
+        delay: 5000,  // Auto change slide every 5 seconds
+      },
+      effect: 'slide',  // Default slide transition effect
+      speed: 800,       // Transition speed
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
   }
 
   ngOnDestroy() {
-    clearInterval(this.intervalId);
+    // Cleanup Swiper instance if needed
   }
 }

@@ -10,6 +10,7 @@ import { UnionStateRelationsComponent } from '../union-state-relations/union-sta
 
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import Swiper from 'swiper';
 
 @Component({
   selector: 'app-hero',
@@ -19,8 +20,38 @@ import { CommonModule } from '@angular/common';
   styleUrl: './hero.component.css',
 })
 export class HeroComponent {
-  constructor() {}
+  
+  linksData = {
+    announcements1: [
+      { title: 'Announcement 1', isNew: true },
+      { title: 'Announcement 2', isNew: false }
+    ],
+    announcements2: [
+      { title: 'Event 1', isNew: true },
+      { title: 'Event 2', isNew: false }
+    ],
+    importantLinks: [
+      { title: 'Links to Historic Announcements' },
+      { title: 'Constitution of India – India Code Website', url: 'https://www.indiacode.nic.in/' },
+      { title: 'Constituent Assembly Debates', url: 'https://cadindia.clpr.org.in/' },
+      { title: 'Federal Setup in Other Countries', url: '#federal-setup' },
+      { title: 'Union Govt. Finance Commission Reports', url: '#finance-commission-reports' }
+    ]
+  };
 
+  constructor() { }
+
+  ngOnInit(): void {
+    // Initialization logic can go here
+  }
+
+  handleLinkClick(item: any) {
+    console.log('Item clicked:', item);
+    if (item.url) {
+      window.open(item.url, '_blank');
+    }
+  }
+}
   // this.contentService.getMembers().subscribe((response) => {
   //   console.log('Members response:', response);
   //   if (response.status === 'success' && response.data.length > 0) {
@@ -37,7 +68,7 @@ export class HeroComponent {
   //     console.log('No members found or failed to load members');
   //   }
   // });
-}
+
 
 // ngAfterViewChecked() {
 //   if (this.videoUrl && this.heroVideo && !this.hasTriedPlay) {
